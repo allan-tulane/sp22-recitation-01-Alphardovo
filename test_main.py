@@ -1,3 +1,4 @@
+
 from main import *
 
 def test_compare_search():
@@ -9,15 +10,20 @@ def test_compare_search():
 	assert res[1][1] < 1
 
 def test_binary_search():
-	assert binary_search([1,2,3,4,5], 5) == 4
-	assert binary_search([1,2,3,4,5], 1) == 0
-	assert binary_search([1,2,3,4,5], 6) == -1
-	### TODO: add two more tests here.
-
-	###
+  assert binary_search([1, 2, 3, 4, 5], 5) == 4
+  assert binary_search([1, 2, 3, 4, 5], 1) == 0
+  assert binary_search([1, 2, 3, 4, 5], 6) == -1
+  ### TODO: add two more tests here.
+  assert binary_search([1,2,4,5,11,89,100], 11) == 4
+  assert binary_search([1,2,4,5,11,89,100], 101) == -1
+  ###
 
 def test_linear_search():
 	""" done. """
 	assert linear_search([1,2,3,4,5], 5) == 4
 	assert linear_search([1,2,3,4,5], 1) == 0
 	assert linear_search([1,2,3,4,5], 6) == -1
+
+test_compare_search()
+test_binary_search()
+test_linear_search()
